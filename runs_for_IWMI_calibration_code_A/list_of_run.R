@@ -1,4 +1,5 @@
-# make list for new runs on 22 November 2014
+
+# make list for new runs on 25 November 2014
 
 min_soil_depth_frac = seq( 0.5,1.5,0.5)
 log_ksat            = 0	
@@ -9,7 +10,7 @@ general_output_folder_name = 'code__a__'
 start_folder_index  = 1 
 
 # file name for the output table that will contain new parameters
-new_parameter_table_file_name = "new_table_22_nov_2014.txt"
+new_parameter_table_file_name = "new_table_24_nov_2014.txt"
 
 # list of existing parameters sets that have been defined in the previous runs
 existing_parameters = NULL
@@ -68,5 +69,6 @@ names(parameters_for_these_runs)[4] <- "log_recession_coef"
 names(parameters_for_these_runs)[5] <- "degree_day_factor"
 write.table(parameters_for_these_runs, new_parameter_table_file_name, row.names=FALSE, col.names=TRUE,sep=" ", quote=FALSE)
 
-test = read.table("new_table_22_nov_2014.txt",header=T)
+test = read.table(new_parameter_table_file_name,header=T)
 print(test)
+
