@@ -29,7 +29,7 @@ number_of_cores = 9
 if (number_of_cores > 32) {core_type = "fat"} else (core_type = "normal")
 
 # location of model script - NOTE: If jobs have not started, you should not update/pull the model script
-model_script = "/home/sutan101/edwinkost/PCR-GLOBWB/model/deterministic_runner_glue_IWMI.py"
+model_script = "/home/sutan101/github/edwinkost/PCR-GLOBWB/model/deterministic_runner_glue_IWMI.py"
 
 # configuration/ini file
 ini_file = "setup_calib_with_fossil_limit_with_pump_limit_26_june_2015_speedy.ini"
