@@ -8,8 +8,8 @@ log_recession_coef  = seq(-1.0,1.0,0.5)
 degree_day_factor   = seq( 0.5,1.5,0.5)
 
 # parameter lists (for speedy)
-min_soil_depth_frac = seq(1.0)
-log_ksat            = seq(0.0)	
+min_soil_depth_frac = c(1.0)
+log_ksat            = c(0.0)	
 log_recession_coef  = seq(-1.0,1.0,1.0)	
 degree_day_factor   = seq( 0.5,1.5,0.5)
 
