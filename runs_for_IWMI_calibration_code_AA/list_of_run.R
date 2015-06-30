@@ -7,38 +7,40 @@ log_ksat            = seq(-1.0,1.0,0.5)
 log_recession_coef  = seq(-1.0,1.0,0.5)	
 degree_day_factor   = seq( 0.5,1.5,0.5)
 
-# parameter lists (for speedy)
-min_soil_depth_frac = c(1.0)
-log_ksat            = c(0.0)	
-log_recession_coef  = seq(-1.0,1.0,1.0)	
-degree_day_factor   = seq( 0.5,1.5,0.5)
-
-# parameter lists (for speedy - 2nd batch)
-min_soil_depth_frac = c(1.0)
-log_ksat            = seq(-1.0,1.0,1.0)	
-log_recession_coef  = seq(-1.0,1.0,1.0)	
-degree_day_factor   = seq( 0.5,1.5,0.5)
+#~ # parameter lists (for speedy/rapid)
+#~ min_soil_depth_frac = c(1.0)
+#~ log_ksat            = c(0.0)	
+#~ log_recession_coef  = seq(-1.0,1.0,1.0)	
+#~ degree_day_factor   = seq( 0.5,1.5,0.5)
+#~ 
+#~ # parameter lists (for speedy/rapid - 2nd batch)
+#~ min_soil_depth_frac = c(1.0)
+#~ log_ksat            = seq(-1.0,1.0,1.0)	
+#~ log_recession_coef  = seq(-1.0,1.0,1.0)	
+#~ degree_day_factor   = seq( 0.5,1.5,0.5)
 
 # output folder name and numbering
 general_output_folder_name = 'code__a__'
-start_folder_index = 9 
+start_folder_index = 27 
 
 # file name for the output table that will contain new parameters
-new_parameter_table_file_name = "table_27_june_2014_speedy_2.txt"
+new_parameter_table_file_name = "table_30_june_2014_cartesius.txt"
 
 # list of existing parameters sets that have been defined in the previous runs
-existing_parameters = c(1.0, 0.0, 0.0, 1.0)                                                             # reference run              
-existing_parameters = rbind(existing_parameters, read.table("table_27_june_2014_speedy.txt", header=T)[2:5])   # from the previous file/run
+existing_parameters = c(1.0, 0.0, 0.0, 1.0)                                                                      # reference run              
+existing_parameters = rbind(existing_parameters, read.table("table_27_june_2014_speedy.txt", header=T)[2:5])     # from the previous file/run
+existing_parameters = rbind(existing_parameters, read.table("table_27_june_2014_speedy_2.txt", header=T)[2:5])   # from the previous file/run
 
 # number of cores that will be used
-number_of_cores = 20
-if (number_of_cores > 32) {core_type = "fat"} else (core_type = "normal")
+number_of_cores = 50
+core_type = "normal"
+#~ if (number_of_cores > 32) {core_type = "fat"} else (core_type = "normal")
 
 # location of model script - NOTE: If jobs have not started, you should not update/pull the model script
-model_script = "/home/sutan101/github/edwinkost/PCR-GLOBWB/model/deterministic_runner_glue_IWMI.py"
+model_script = "/home/edwin/github/edwinkost/PCR-GLOBWB/model/deterministic_runner_glue_IWMI.py"
 
 # configuration/ini file
-ini_file = "setup_calib_with_fossil_limit_with_pump_limit_26_june_2015_speedy.ini"
+ini_file = "setup_calib_with_fossil_limit_with_pump_limit_26_june_2015_cartesius.ini"
 
 # name for job scripts:
 job_general_name = "calibration_aa_" # example: "calibration_aa_001-022.sh"
